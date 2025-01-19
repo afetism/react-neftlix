@@ -1,23 +1,18 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import en from "./en.json"
-import ru from "./ru.json"
- 
+import en from './en.json';
+import az from './az.json';
+
 const resources = {
-    ru: {
-        translation: ru,
-    },
-    en: {
-        translation: en,
-    },
+    en: { translation: en },
+    az: { translation: az },
 };
- 
+
 i18n.use(initReactI18next).init({
     resources,
     lng: 'en',
-    fallbackLng: 'ru',
-    compatibilityJSON: 'v3',
-    interpolation: {
-        escapeValue: false,
-    },
+    fallbackLng: 'en',
+    interpolation: { escapeValue: false },
 });
+
+export default i18n;
